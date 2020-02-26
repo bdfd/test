@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajax Test Page</title>
+  </head>
+  <body>
+    <p>
+      Ajax 3!
+    </p>
+    <button id="button">
+      Load GitHub Users
+    </button>
+    <br /><br />
+    <h1>GithubUsers</h1>
+    <div id="users"></div>
+    <script>
+      document.getElementById('button').addEventListener('click', loadUser);
+      //Load GitHub Users
+      function loadUser() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://api.github.com/users', true);
+        xhr.onload = function() {
+          if (this.status == 200) {
+            var users = JSON.parse(this.responseText);
+            console.log(users);
+            var output = '';
+            for (var i in users) {
+              output +=
+                '<ul>' +
+                '<li>Username:' +
+                users[i].login +
+                '</li>' +
+                '<li>ID:' +
+                users[i].id +
+                '</li>' +
+                '<li>Follower List Url:' +
+                users[i].followers_url +
+                '</li>' +
+                '</ul>';
+            }
+            document.getElementById('users').innerHTML = output;
+            console.log(output);
+          }
+        };
+        xhr.send();
+      }
+    </script>
+  </body>
+</html>

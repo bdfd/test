@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajax Test Page</title>
+  </head>
+  <body>
+    <p>
+      Ajax 2!
+    </p>
+    <button id="button1">
+      Get Users
+    </button>
+    <br /><br />
+    <h1>Users</h1>
+    <div id="users"></div>
+    <script>
+      document.getElementById('button1').addEventListener('click', loadUser);
+      function loadUser() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'users.json', true);
+        xhr.onload = function() {
+          if (this.status == 200) {
+            var users = JSON.parse(this.responseText);
+            console.log(users);
+            var output = '';
+            for (var i in users) {
+              output +=
+                '<ul>' +
+                '<li>ID:' +
+                users[i]._id +
+                '</li>' +
+                '<li>First Name:' +
+                users[i].name.first +
+                '</li>' +
+                '<li>Last Name:' +
+                users[i].name.last +
+                '</li>' +
+                '<li>Company Name:' +
+                users[i].company +
+                '</li>' +
+                '</ul>';
+            }
+            document.getElementById('users').innerHTML = output;
+            console.log(output);
+          }
+        };
+        xhr.send();
+      }
+    </script>
+  </body>
+</html>

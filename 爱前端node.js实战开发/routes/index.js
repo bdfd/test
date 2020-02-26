@@ -7,20 +7,28 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/ajax', function(req, res, next) {
-  res.render('Ajax');
+  res.render('ajax');
 });
 
-router.get('/:number', function(req, res) {
-  res.send('结果页: ' + req.params.number);
+router.get('/ajax2', function(req, res, next) {
+  res.render('ajax2');
 });
 
-router.get('/student/:xuehao', function(req, res) {
-  if (/^[\d]{6}$/.test(req.params.xuehao)) {
-    res.send('学生频道，学号' + req.params.xuehao);
-  } else {
-    res.send('学号不正确!');
-  }
+router.get('/ajax3', function(req, res, next) {
+  res.render('ajax3');
 });
+
+// router.get('/:number', function(req, res) {
+//   res.send('结果页: ' + req.params.number);
+// });
+
+// router.get('/student/:xuehao', function(req, res) {
+//   if (/^[\d]{6}$/.test(req.params.xuehao)) {
+//     res.send('学生频道，学号' + req.params.xuehao);
+//   } else {
+//     res.send('学号不正确!');
+//   }
+// });
 
 // router.get('/student/:xuehao'),
 //   function(req, res) {
