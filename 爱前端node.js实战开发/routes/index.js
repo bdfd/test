@@ -18,6 +18,10 @@ router.get('/ajax3', function(req, res, next) {
   res.render('ajax3');
 });
 
+router.get('/jquery1', function(req, res, next) {
+  res.render('jquery1_selector');
+});
+
 // router.get('/:number', function(req, res) {
 //   res.send('结果页: ' + req.params.number);
 // });

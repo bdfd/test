@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery Crash Course | Selector</title>
+    <script src="/js/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>jQuery Crash Course</h1>
+    </header>
+    <div id="container">
+      <h1 id="heading1">Heading One</h1>
+      <p id="para1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia minus
+        doloremque provident eveniet aut non ex nostrum dolores suscipit
+        sapiente natus repellendus at iusto commodi, tempora vel recusandae
+        aliquam fugiat!
+      </p>
+      <h1 class="heading2">Heading Two</h1>
+      <p class="para2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia minus
+        doloremque provident eveniet aut non ex nostrum dolores suscipit
+        sapiente natus repellendus at iusto commodi, tempora vel recusandae
+        aliquam fugiat!
+      </p>
+      <ul id="list">
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+      </ul>
+      <input type="button" value="button1" />
+      <input type="submit" value="button1" />
+      <input type="text" />
+    </div>
+    <script>
+      // $('h1#heading1').hide();
+      $('ul#list li:first').css('color', 'red');
+      $('ul#list li:last').css('color', 'blue');
+      $('ul#list li:even').css('background-color', 'yellow');
+      $('ul#list li:odd').css('background-color', 'grey');
+      $('ul#list li:nth-child(3n)').css('list-style', 'none');
+      $('ul#list li:first').css('color', 'red');
+      $(':button').hide();
+    </script>
+  </body>
+</html>
