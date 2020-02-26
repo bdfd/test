@@ -21,68 +21,36 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Brand</a>
+          <a class="navbar-brand" href="#">约数计算器 </a>
         </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="active">
-              <a href="#">Link <span class="sr-only">(current)</span></a>
-            </li>
-            <li><a href="#">Link</a></li>
-            <li class="dropdown">
-              <a
-                href="#"
-                class="dropdown-toggle"
-                data-toggle="dropdown"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Dropdown <span class="caret"></span
-              ></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-          <form class="navbar-form navbar-left">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search" />
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-          </form>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Link</a></li>
-            <li class="dropdown">
-              <a
-                href="#"
-                class="dropdown-toggle"
-                data-toggle="dropdown"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Dropdown <span class="caret"></span
-              ></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-      </div>
-      <!-- /.container-fluid -->
+        
     </nav>
+    <div class="container">
+      <div class="row">
+        <h3>本系统可以查询1~100000之内的所有数字的因数</h3>
+        <p>
+          请输入需要查询的数字：
+        </p>
+        <p>
+          <input type="number" id="numbertxt" class="form-control">
+        </p>
+        <p>
+          <button type="button" class="btn btn-info" id="btn">查询</button>
+        </p>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+      $("#btn").click(function(){
+        //查询按钮是一个跳转按钮
+        var number = parseInt($("#numbertxt").val());
+        alert(number)
+        if(number > 100000){
+          alert("太大了！");
+          return;
+        }
+        window.location = "/" + number;
+      });
+    </script>
   </body>
 </html>

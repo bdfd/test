@@ -6,6 +6,14 @@ router.get('/', function(req, res, next) {
   res.render('index');
 });
 
+router.get('/ajax', function(req, res, next) {
+  res.render('Ajax');
+});
+
+router.get('/:number', function(req, res) {
+  res.send('结果页: ' + req.params.number);
+});
+
 router.get('/student/:xuehao', function(req, res) {
   if (/^[\d]{6}$/.test(req.params.xuehao)) {
     res.send('学生频道，学号' + req.params.xuehao);
