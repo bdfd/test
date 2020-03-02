@@ -7,19 +7,19 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/ajax', function(req, res, next) {
-  res.render('ajax');
+  res.render('ajax/ajax');
 });
 
 router.get('/ajax2', function(req, res, next) {
-  res.render('ajax2');
+  res.render('ajax/ajax2');
 });
 
 router.get('/ajax3', function(req, res, next) {
-  res.render('ajax3');
+  res.render('ajax/ajax3');
 });
 
 router.get('/jquery1', function(req, res, next) {
-  res.render('jquery1_selector');
+  res.render('ajax/jquery1_selector');
 });
 
 // router.get('/:number', function(req, res) {
