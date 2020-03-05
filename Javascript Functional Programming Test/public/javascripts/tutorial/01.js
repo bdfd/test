@@ -26,25 +26,20 @@ var Stack = function() {
   };
 };
 
-var test = function(num) {
-  var output = num;
-  return output;
-};
 //10进制转2进制
-var divBy2 = function(number) {
+var DB2 = function(number) {
   var stack = new Stack();
   var yushu;
   var string2 = '';
 
   while (number > 0) {
     yushu = number % 2;
-    Stack.push(yushu);
+    stack.push(yushu);
     number = Math.floor(number / 2);
     console.log('numb', numb);
   }
-
   while (!stack.isEmpty()) {
-    string2 += Stack.pop();
+    string2 += stack.pop();
   }
   return string2;
 };
