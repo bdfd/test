@@ -43,4 +43,11 @@ router.get('/04', function(req, res, next) {
   res.render('functions/preps/prep04');
 });
 
+//router address localhost:2001/func_preps/05
+//descriptions: Prerequisite Course 5
+//comments:
+router.get('/05', function(req, res, next) {
+  res.render('functions/preps/prep05');
+});
+
 module.exports = router;
