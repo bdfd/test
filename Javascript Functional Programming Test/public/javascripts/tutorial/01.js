@@ -28,18 +28,26 @@ var Stack = function() {
 
 //10进制转2进制
 var DB2 = function(number) {
-  var stack = new Stack();
+  var s = new Stack();
+
   var yushu;
   var string2 = '';
 
   while (number > 0) {
     yushu = number % 2;
-    stack.push(yushu);
+    console.log('yushu', yushu);
+    s.push(yushu);
+    console.log('s', s.getItems());
     number = Math.floor(number / 2);
-    console.log('numb', numb);
+    console.log('number', number);
   }
-  while (!stack.isEmpty()) {
-    string2 += stack.pop();
-  }
-  return string2;
+  // string2 = s.pop();
+  // console.log('string2', string2);
+  // while (!s.isEmpty()) {
+  //   console.log('!s.isEmpty()', !s.isEmpty());
+  //   string2 += s.pop();
+  //   console.log('string2', string2);
+  // }
+  console.log('s', s);
+  return s;
 };
