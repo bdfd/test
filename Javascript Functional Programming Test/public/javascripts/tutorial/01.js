@@ -6,7 +6,7 @@ var Stack = function() {
   };
   //移除新元素(栈底)
   this.pop = function() {
-    return items.pop(element);
+    return items.pop();
   };
   //检查栈顶
   this.peek = function() {
@@ -27,27 +27,26 @@ var Stack = function() {
 };
 
 //10进制转2进制
-var DB2 = function(number) {
-  var s = new Stack();
+var TentoTwo = function(number) {
+  var stack = new Stack();
 
   var yushu;
   var string2 = '';
 
   while (number > 0) {
     yushu = number % 2;
-    console.log('yushu', yushu);
-    s.push(yushu);
-    console.log('s', s.getItems());
+    // console.log('yushu', yushu);
+    stack.push(yushu);
+    // console.log('stack', stack.getItems());
     number = Math.floor(number / 2);
-    console.log('number', number);
+    // console.log('number', number);
   }
-  // string2 = s.pop();
-  // console.log('string2', string2);
-  // while (!s.isEmpty()) {
-  //   console.log('!s.isEmpty()', !s.isEmpty());
-  //   string2 += s.pop();
-  //   console.log('string2', string2);
-  // }
-  console.log('s', s);
-  return s;
+  // console.log('stack', stack.getItems());
+  while (!stack.isEmpty()) {
+    // console.log('!stack.isEmpty()', !stack.isEmpty());
+    string2 += stack.pop();
+    // console.log('string2', string2);
+  }
+  // console.log('stack', stack);
+  return string2;
 };
