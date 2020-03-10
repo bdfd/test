@@ -116,22 +116,22 @@ var num3 = +prompt('输入你的第三个数字:');
 //     num3 +
 //     '.'
 // );
-if (num1 >= num2 && num1 >= num3) {
-  if (num2 >= numb3) {
-    alert('排序是:' + num1 + ',' + num2 + ',' + num3);
-  } else {
-    alert('排序是:' + num1 + ',' + num3 + ',' + num2);
-  }
-} else if (num2 >= num1 && num2 >= num3) {
-  if (num1 >= numb3) {
-    alert('排序是:' + num2 + ',' + num1 + ',' + num3);
-  } else {
-    alert('排序是:' + num2 + ',' + num3 + ',' + num1);
-  }
-} else {
-  if (num1 >= numb2) {
-    alert('排序是:' + num3 + ',' + num1 + ',' + num2);
-  } else {
-    alert('排序是:' + num3 + ',' + num2 + ',' + num1);
-  }
-}
+// if (num1 >= num2 && num1 >= num3) {
+//   if (num2 >= numb3) {
+//     alert('排序是:' + num1 + ',' + num2 + ',' + num3);
+//   } else {
+//     alert('排序是:' + num1 + ',' + num3 + ',' + num2);
+//   }
+// } else if (num2 >= num1 && num2 >= num3) {
+//   if (num1 >= numb3) {
+//     alert('排序是:' + num2 + ',' + num1 + ',' + num3);
+//   } else {
+//     alert('排序是:' + num2 + ',' + num3 + ',' + num1);
+//   }
+// } else {
+//   if (num1 >= num2) {
+//     alert('排序是:' + num3 + ',' + num1 + ',' + num2);
+//   } else {
+//     alert('排序是:' + num3 + ',' + num2 + ',' + num1);
+//   }
+// }
