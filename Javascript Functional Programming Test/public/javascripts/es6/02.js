@@ -83,6 +83,41 @@ const template = `
     <div>${Jelly.date}</div>
   </div>
 `;
-document.body.innerHTML = template;
+document.getElementById('demo1').innerHTML = template;
 
-console.log();
+const user1 = 'Mary';
+const topic1 = 'Learn to use markdown';
+
+function highlight1(strings, ...values) {
+  const highlighted = values.map(
+    value => `
+    <span class="highlight">${value}</span>
+  `
+  );
+  return strings.reduce(
+    (prev, curr, i) => `${prev}${curr}${highlighted[i] || ''}`,
+    ''
+  );
+}
+const temp1 = highlight1`${user1} has commented on your topic ${topic1}`;
+document.getElementById('demo2').innerHTML = temp1;
+
+const user2 = 'Harry';
+const topic2 = 'Learn to use javascirpt';
+function highlight2(strings, ...values) {
+  const highlighted = values.map(
+    value => `
+    <span class="highlight">${value}</span>
+  `
+  );
+  let str = '';
+  strings.forEach((string, i) => {
+    str += `${string}${highlighted[i] || ''}`;
+    // console.log('str', str);
+  });
+  // console.log('str', str);
+  return str;
+}
+
+const temp2 = highlight2`${user2} has commented on your topic ${topic2}`;
+document.getElementById('demo3').innerHTML = temp2;
