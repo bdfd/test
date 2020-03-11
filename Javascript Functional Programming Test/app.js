@@ -13,7 +13,7 @@ var prepsRouter = require('./routes/preps');
 var fundRouter = require('./routes/fundamental');
 var tutorialsRouter = require('./routes/tutorials');
 var lecturesRouter = require('./routes/lectures');
-
+var es6Router = require('./routes/ES6');
 var vuesRouter = require('./routes/vues');
 
 var app = express();
@@ -39,6 +39,7 @@ app.use('/func_preps', prepsRouter);
 app.use('/func_fundamental', fundRouter);
 app.use('/func_lectures', lecturesRouter);
 app.use('/func_tutorials', tutorialsRouter);
+app.use('/func_es6', es6Router);
 app.use('/func_vues', vuesRouter);
 
 // catch 404 and forward to error handler
