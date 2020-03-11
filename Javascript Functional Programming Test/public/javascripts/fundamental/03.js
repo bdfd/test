@@ -104,9 +104,9 @@ if (age > 17 && age <= 30) {
 
 //Question 3
 //如果测试 Question 3 则把下面变为非备注
-var num1 = +prompt('输入你的第一个数字:');
-var num2 = +prompt('输入你的第二个数字:');
-var num3 = +prompt('输入你的第三个数字:');
+// var num1 = +prompt('输入你的第一个数字:');
+// var num2 = +prompt('输入你的第二个数字:');
+// var num3 = +prompt('输入你的第三个数字:');
 // alert(
 //   'first no. is:' +
 //     num1 +
